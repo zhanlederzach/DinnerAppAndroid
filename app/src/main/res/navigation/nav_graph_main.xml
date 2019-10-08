@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="kz.myfood.ui.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_loginValidationFragment"
+            app:destination="@id/loginValidationFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginValidationFragment"
+        android:name="kz.myfood.ui.login.LoginValidationFragment"
+        android:label="fragment_login_validation"
+        tools:layout="@layout/fragment_login_validation">
+        <action
+            android:id="@+id/action_go_to_home_fragment"
+            app:destination="@id/main_host_fragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/main_host_fragment"
+        android:name="kz.myfood.ui.MainHostFragment"
+        android:label="Main Host Fragment"
+        tools:layout="@layout/fragment_main_host">
+    </fragment>
+
+</navigation>

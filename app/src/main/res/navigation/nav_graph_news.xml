@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_news"
+    app:startDestination="@id/news_dest">
+
+    <fragment
+        android:id="@+id/news_dest"
+        android:name="kz.myfood.ui.news.NewsFragment"
+        android:label="News">
+<!--        <action-->
+<!--            android:id="@+id/action_read"-->
+<!--            app:destination="@id/book_dest" />-->
+    </fragment>
+<!--    <fragment-->
+<!--        android:id="@+id/book_dest"-->
+<!--        android:name="kz.myfood.ui.news.NewsFragment"-->
+<!--        android:label="News">-->
+<!--        <deepLink-->
+<!--            android:id="@+id/deepLink"-->
+<!--            app:uri="www.nav.viewpager.com/{title}/{date}" />-->
+<!--    </fragment>-->
+</navigation>
